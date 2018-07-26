@@ -1,0 +1,10 @@
+download video from Zhihu
+steps:
+  1. find iframe in web souce code, the souce code should be decompress with brotli
+  2. find video url in iframe
+  3. get video id in url
+  4. download json from url prefix + video id, json should be decompress with brotli
+  5. there is a cover image and [hd, ld, sd] three m3u8 urls in json
+  6. donwload [hd, ld, sd].m3u8
+  7. download all ts files shown in m3u8
+  8. merge all ts files and convert it to mp4
